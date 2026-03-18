@@ -21,6 +21,6 @@ jobs:
           aws-region: us-east-1
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
       - name: Sync S3 bucket
-        run: aws s3 sync ./src s3://${{ secrets.S3_BUCKET_NAME }} --delete"
+        run: aws s3 sync ./src s3://${{ secrets.S3_BUCKET_NAME }} --delete
       - name: Invalidate CloudFront cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
