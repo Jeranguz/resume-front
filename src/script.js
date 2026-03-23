@@ -2,7 +2,7 @@ const counterSpan = document.getElementById('counter');
 let counter = 0;
 
 const updateCounter = async () => {
-    response = await fetch('https://krm5r2jro4.execute-api.us-east-1.amazonaws.com/visitor')
+    response = await fetch('https://1ekiv1rvoj.execute-api.us-east-1.amazonaws.com/visitor')
     .then(response => response.json())
     .then(data => {
         counter = data.body;
